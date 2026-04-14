@@ -1,3 +1,9 @@
+---
+name: Editorial task
+about: A task tied to editorial work
+labels: editorial
+---
+
 ## Page / section
 [e.g. Page 4 — When/How]
 
