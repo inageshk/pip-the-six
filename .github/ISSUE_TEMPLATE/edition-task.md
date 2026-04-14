@@ -1,3 +1,9 @@
+---
+name: Edition task
+about: A task tied to a specific edition
+labels: P1-this-edition
+---
+
 ## What
 [One sentence — what needs to be done]
 
