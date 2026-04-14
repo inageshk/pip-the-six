@@ -1,3 +1,9 @@
+---
+name: Dev task
+about: A task tied to development
+labels: dev
+---
+
 ## What
 [One sentence]
 
