@@ -13,9 +13,9 @@ House rules apply to this page too: no em dashes, teal Pip on dark surfaces.
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pip · The Six</title>
-<meta name="description" content="Pip takes one thing happening in the world and explains it properly, for curious readers aged 10 to 17. Free, on WhatsApp or email.">
+<meta name="description" content="Pip takes one thing happening in the world and explains it properly, for curious readers aged 10 to 17.">
 <meta property="og:title" content="Pip · One story, explained properly">
-<meta property="og:description" content="For curious readers aged 10 to 17. Six honest questions, one topic at a time. Free, on WhatsApp or email.">
+<meta property="og:description" content="For curious readers aged 10 to 17. Six honest questions, one topic at a time.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://inageshk.github.io/pip-the-six/">
 <meta property="og:image" content="https://inageshk.github.io/pip-the-six/share.png">
@@ -90,7 +90,9 @@ House rules apply to this page too: no em dashes, teal Pip on dark surfaces.
   #us p a { color: #0F6E56; font-weight: 700; }
   .aside cite { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); font-style: normal; }
 
-  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+  .facts { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 8px; }
+  .fact { grid-column: span 2; }
+  .fact:nth-child(n+4) { grid-column: span 3; }
   .fact { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; }
   .fact b { display: block; font-family: var(--serif); font-weight: 500; font-size: 20px; margin-bottom: 6px; }
   .fact span { font-size: 15px; color: var(--muted); }
@@ -126,6 +128,7 @@ House rules apply to this page too: no em dashes, teal Pip on dark surfaces.
     .latest-side { border-left: none; border-top: 6px solid var(--ed-b); padding: 22px; }
     .two { gap: 24px; }
     .facts { grid-template-columns: 1fr; }
+    .fact, .fact:nth-child(n+4) { grid-column: auto; }
     .signup { padding: 30px 22px; }
     section { padding: 44px 0; }
     .editions a { grid-template-columns: 14px 1fr; }
@@ -214,7 +217,6 @@ House rules apply to this page too: no em dashes, teal Pip on dark surfaces.
       <div class="fact"><b>India in every story</b><span>Our readers are Indian. Each edition shows where India fits in the story.</span></div>
       <div class="fact"><b>Something to think about</b><span>Each edition carries open questions with no right answer. They work well at dinner.</span></div>
       <div class="fact"><b>No opinions on politics</b><span>Pip reports what happened and what it means. Readers make up their own minds.</span></div>
-      <div class="fact"><b>Free</b><span>No app. No login. No ads. Each edition is a single page that opens in a browser.</span></div>
     </div>
   </section>
 
