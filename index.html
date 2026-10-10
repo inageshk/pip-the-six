@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+PIP HOME PAGE
+Lives at the root of the pip-the-six repo as index.html.
+
+TO UPDATE WHEN A NEW EDITION SHIPS (two places, both marked below):
+  1. LATEST EDITION block: change number, date, title, question, blurb, link, colours.
+  2. ALL EDITIONS list: add the new edition at the top.
+House rules apply to this page too: no em dashes, teal Pip on dark surfaces.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pip · The Six</title>
+<meta name="description" content="Pip takes one thing happening in the world and explains it properly, for curious readers aged 10 to 17. Free, on WhatsApp or email.">
+<meta property="og:title" content="Pip · One story, explained properly">
+<meta property="og:description" content="For curious readers aged 10 to 17. Six honest questions, one topic at a time. Free, on WhatsApp or email.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inageshk.github.io/pip-the-six/">
+<!-- TODO: add a 1200x630 share image and uncomment. WhatsApp and LinkedIn previews use it.
+<meta property="og:image" content="https://inageshk.github.io/pip-the-six/share.png">
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --forest: #1a3a2a;
+    --forest-deep: #12291e;
+    --teal: #5DCAA5;
+    --teal-soft: #9FE1CB;
+    --mint: #E1F5EE;
+    --gold: #C9A84C;
+    --paper: #f3efe6;
+    --card: #fbf9f4;
+    --ink: #1a1a18;
+    --muted: #63635d;
+    --rule: rgba(26,26,24,0.14);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* Top: dark surface, so Pip is teal */
+  .top { background: var(--forest); color: var(--mint); padding-bottom: 56px; }
+  .mast { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand svg { width: 44px; height: 44px; }
+  .brand-name { font-family: var(--serif); font-size: 28px; font-weight: 600; font-style: italic; color: var(--teal); line-height: 1; }
+  .brand-sub { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-soft); }
+  .mast-cta { font-size: 14px; font-weight: 700; text-decoration: none; color: var(--forest); background: var(--teal); padding: 9px 16px; border-radius: 999px; white-space: nowrap; }
+  .mast-cta:hover, .btn:hover { filter: brightness(1.08); }
+
+  .lede { padding: 36px 0 32px; max-width: 760px; }
+  .lede h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6.4vw, 60px); line-height: 1.05; letter-spacing: -0.01em; text-wrap: balance; }
+  .lede h1 em { color: var(--teal); }
+  .lede p { margin-top: 16px; font-size: 18px; color: var(--teal-soft); max-width: 600px; }
+
+  /* Latest edition card: colours follow that edition's palette */
+  .latest { --ed-bg: #121212; --ed-fg: #faf9f5; --ed-a: #F36700; --ed-b: #00895D;
+    display: grid; grid-template-columns: 1.25fr 1fr; background: var(--ed-bg); color: var(--ed-fg);
+    border-radius: 14px; overflow: hidden; text-decoration: none; box-shadow: 0 18px 40px rgba(0,0,0,0.35); }
+  .latest-main { padding: 32px 32px 30px; }
+  .tagline { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .new { background: var(--ed-a); color: #111; font-weight: 700; padding: 3px 9px; border-radius: 4px; }
+  .latest h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 5vw, 46px); line-height: 1.08; margin: 16px 0 10px; text-wrap: balance; }
+  .latest .q { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.35; opacity: 0.92; }
+  .latest .blurb { margin-top: 14px; font-size: 16px; opacity: 0.8; max-width: 46ch; }
+  .btn { display: inline-block; margin-top: 22px; font-weight: 700; font-size: 16px; text-decoration: none; padding: 12px 22px; border-radius: 999px; background: var(--ed-a); color: #111; }
+  .latest-side { background: var(--ed-fg); color: #111; padding: 28px; display: flex; flex-direction: column; justify-content: center; gap: 10px; border-left: 6px solid var(--ed-b); }
+  .six { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .six li { font-family: var(--serif); font-style: italic; font-size: 19px; padding: 8px 12px; border: 1.5px solid #111; border-radius: 8px; }
+  .six li:nth-child(odd) { border-color: var(--ed-a); }
+  .six li:nth-child(even) { border-color: var(--ed-b); }
+  .side-note { font-size: 13px; color: #555; margin-top: 4px; }
+
+  section { padding: 56px 0; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F6E56; margin-bottom: 12px; }
+  h3.head { font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 4vw, 36px); line-height: 1.15; margin-bottom: 16px; text-wrap: balance; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .two p + p { margin-top: 14px; }
+  .aside { background: var(--card); border: 1px solid var(--rule); border-left: 5px solid var(--teal); border-radius: 10px; padding: 22px 24px; align-self: start; }
+  .aside p { font-size: 16px; }
+  #us p a { color: #0F6E56; font-weight: 700; }
+  .aside cite { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); font-style: normal; }
+
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+  .fact { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; }
+  .fact b { display: block; font-family: var(--serif); font-weight: 500; font-size: 20px; margin-bottom: 6px; }
+  .fact span { font-size: 15px; color: var(--muted); }
+
+  /* Signup: dark surface again */
+  .signup { background: var(--forest); color: var(--mint); border-radius: 14px; padding: 40px 36px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; }
+  .signup .eyebrow { color: var(--teal); }
+  .signup p { color: var(--teal-soft); max-width: 48ch; }
+  .signup .btn { background: var(--teal); color: var(--forest); font-size: 17px; padding: 14px 26px; }
+  .steps { list-style: none; counter-reset: s; display: grid; gap: 12px; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 10px; font-size: 15px; color: var(--mint); }
+  .steps li::before { content: counter(s); font-family: var(--serif); font-size: 20px; color: var(--gold); line-height: 1.2; }
+
+  .editions { list-style: none; border-top: 1px solid var(--rule); }
+  .editions a { display: grid; grid-template-columns: 14px 90px 1fr auto; gap: 16px; align-items: center; padding: 20px 4px; border-bottom: 1px solid var(--rule); text-decoration: none; }
+  .editions a:hover { background: var(--card); }
+  .swatch { width: 14px; height: 44px; border-radius: 3px; }
+  .ed-no { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .ed-title { font-family: var(--serif); font-size: 22px; font-weight: 500; line-height: 1.2; }
+  .ed-sub { display: block; font-family: var(--sans); font-size: 15px; color: var(--muted); margin-top: 2px; }
+  .ed-go { font-size: 14px; font-weight: 700; color: #0F6E56; white-space: nowrap; }
+
+  footer { background: var(--forest-deep); color: var(--teal-soft); padding: 32px 0; font-size: 14px; margin-top: 24px; }
+  .foot { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .foot svg { width: 34px; height: 34px; }
+  .foot a { color: var(--teal); }
+
+  a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+  @media (max-width: 760px) {
+    .latest, .two, .signup { grid-template-columns: 1fr; }
+    .latest-main { padding: 26px 22px; }
+    .latest-side { border-left: none; border-top: 6px solid var(--ed-b); padding: 22px; }
+    .two { gap: 24px; }
+    .facts { grid-template-columns: 1fr; }
+    .signup { padding: 30px 22px; }
+    section { padding: 44px 0; }
+    .editions a { grid-template-columns: 14px 1fr; }
+    .ed-no { grid-column: 2; }
+    .ed-title { grid-column: 2; }
+    .ed-go { grid-column: 2; }
+    .swatch { grid-row: 1 / span 3; height: 100%; }
+    .brand-sub { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <div class="mast">
+      <a class="brand" href="./" aria-label="Pip home">
+        <!-- pip-crow-teal.svg, unchanged -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Pip the crow">
+          <path d="M26 64 L2 83 L9 88 L34 76 Z" fill="#5DCAA5"/>
+          <ellipse cx="45" cy="58" rx="29" ry="17" fill="#5DCAA5" transform="rotate(-20 45 58)"/>
+          <path d="M52 42 L60 24 L77 43 L66 60 Z" fill="#5DCAA5"/>
+          <ellipse cx="68" cy="33" rx="15" ry="13" fill="#5DCAA5"/>
+          <path d="M24 66 Q42 46 64 54 Q52 72 30 73 Z" fill="#48B48F"/>
+          <path d="M79 27 C87 26 95 30 100 37 C93 38.5 86 40 80 40 Z" fill="#C9A84C"/>
+          <circle cx="71" cy="31" r="3.2" fill="#121212"/>
+          <path d="M41 75 L41 92 M41 92 L36 95 M41 92 L46 95 M56 72 L56 92 M56 92 L51 95 M56 92 L61 95" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span>
+          <span class="brand-name">Pip</span>
+        </span>
+        <span class="brand-sub">The Six</span>
+      </a>
+      <a class="mast-cta" href="https://forms.gle/TqKcyzHDoadU2W3h8" target="_blank" rel="noopener">Get Pip</a>
+    </div>
+
+    <div class="lede">
+      <h1>One thing happening in the world. <em>Explained properly.</em></h1>
+      <p>Pip is for curious readers aged 10 to 17. Each edition takes one topic and asks six honest questions about it.</p>
+    </div>
+
+    <!-- ============ LATEST EDITION: update this block for each new edition ============ -->
+    <a class="latest" href="editions/edition-03.html" target="_blank" rel="noopener">
+      <div class="latest-main">
+        <div class="tagline"><span class="new">Latest</span><span>Edition 3 · 10 October 2026</span></div>
+        <h2>Fifty Rupees, Two Seconds</h2>
+        <p class="q">You scan a QR code. A speaker says the money came. So what just happened?</p>
+        <p class="blurb">How UPI works. Where the money goes, why it needs something in the middle, and who pays for it.</p>
+        <span class="btn">Read this edition</span>
+      </div>
+      <div class="latest-side">
+        <ul class="six">
+          <li>What</li><li>Why</li><li>When</li><li>How</li><li>Where</li><li>Who</li>
+        </ul>
+        <p class="side-note">Opens in your browser.</p>
+      </div>
+    </a>
+    <!-- ============ END LATEST EDITION ============ -->
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="what">
+    <div class="two">
+      <div>
+        <div class="eyebrow">What is Pip?</div>
+        <h3 class="head">Not a summary. Not a lesson. One story, all the way through.</h3>
+        <p>Most news is written for adults. It assumes you already know the backstory. Pip does not.</p>
+        <p>Each edition is called The Six. It picks one topic and asks what, why, when, how, where and who. It starts with something you can picture. It ends with what to watch for next.</p>
+        <p>Pip is a crow. The kind who is always on the roof, always watching, always the first to know. Pip does not teach. Pip found something interesting and wants to show you.</p>
+      </div>
+      <div class="aside">
+        <p><strong>Why "The Six"?</strong> Rudyard Kipling once wrote about six honest serving men who taught him everything he knew. Their names were What and Why and When and How and Where and Who. Every edition of Pip asks all six.</p>
+        <cite>From <a href="https://en.wikipedia.org/wiki/Just_So_Stories" target="_blank" rel="noopener">Just So Stories</a>, first published in 1902.</cite>
+      </div>
+    </div>
+  </section>
+
+  <section id="who" style="padding-top:0">
+    <div class="eyebrow">Who is it for?</div>
+    <h3 class="head">Readers aged 10 to 17. And the grown-ups at their dinner table.</h3>
+    <div class="facts">
+      <div class="fact"><b>Written for a smart 10-year-old</b><span>The topic is made simple. The reader is not. Real words, explained when needed.</span></div>
+      <div class="fact"><b>Deep enough for a 17-year-old</b><span>The early pages are easy. The later pages go further. You earn the depth by reading on.</span></div>
+      <div class="fact"><b>India in every story</b><span>Our readers are Indian. Each edition shows where India fits in the story.</span></div>
+      <div class="fact"><b>Something to think about</b><span>Each edition carries open questions with no right answer. They work well at dinner.</span></div>
+      <div class="fact"><b>No opinions on politics</b><span>Pip reports what happened and what it means. Readers make up their own minds.</span></div>
+      <div class="fact"><b>Free</b><span>No app. No login. No ads. Each edition is a single page that opens in a browser.</span></div>
+    </div>
+  </section>
+
+  <section id="signup" style="padding-top:0">
+    <div class="signup">
+      <div>
+        <div class="eyebrow">Get Pip</div>
+        <h3 class="head">New editions come to you. On WhatsApp or email.</h3>
+        <p>Pip comes once in a while. A new edition goes out when there is a topic worth the trouble and the edition is ready. We ask for a phone number or an email address. Nothing else.</p>
+        <a class="btn" href="https://forms.gle/TqKcyzHDoadU2W3h8" target="_blank" rel="noopener">Sign up for Pip</a>
+      </div>
+      <ol class="steps">
+        <li>Fill in the form. It takes under a minute.</li>
+        <li>The next edition reaches you on WhatsApp or email when it is ready.</li>
+        <li>Read it with your child, or pass it on. Reply with a thought or a question. We read every one.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="us" style="padding-top:0">
+    <div class="two">
+      <div>
+        <div class="eyebrow">Who is behind Pip?</div>
+        <h3 class="head">Two fathers, with children the age Pip is written for.</h3>
+      </div>
+      <div>
+        <p>Pip is made in Bengaluru and Mumbai by the two of us, <a href="https://www.linkedin.com/in/nageshk/" target="_blank" rel="noopener">Nagesh</a> and <a href="https://www.linkedin.com/in/kennethserrao/" target="_blank" rel="noopener">Ken</a>.</p>
+        <p>We are both fathers, with children in the age range Pip is written for. That is where Pip comes from. They ask good questions about the news. But the news itself is written for grown-ups.</p>
+        <p>So we started writing something for them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="editions" style="padding-top:0">
+    <div class="eyebrow">All editions</div>
+    <h3 class="head">Everything Pip has asked so far.</h3>
+    <!-- ============ ALL EDITIONS: add new editions at the top ============ -->
+    <ul class="editions">
+      <li><a href="editions/edition-03.html" target="_blank" rel="noopener">
+        <span class="swatch" style="background:linear-gradient(#F36700 0 33%, #121212 33% 66%, #00895D 66%)"></span>
+        <span class="ed-no">Edition 3</span>
+        <span class="ed-title">Fifty Rupees, Two Seconds<span class="ed-sub">How does UPI work, and who pays for it?</span></span>
+        <span class="ed-go">Read &rarr;</span>
+      </a></li>
+      <li><a href="editions/edition-02.html" target="_blank" rel="noopener">
+        <span class="swatch" style="background:linear-gradient(#0B1628 0 66%, #C9A84C 66%)"></span>
+        <span class="ed-no">Edition 2</span>
+        <span class="ed-title">The Moon and Us<span class="ed-sub">Why humans have always looked up. And why, after fifty years, we are finally going back.</span></span>
+        <span class="ed-go">Read &rarr;</span>
+      </a></li>
+      <li><a href="editions/edition-01.html" target="_blank" rel="noopener">
+        <span class="swatch" style="background:linear-gradient(#f4edda 0 50%, #8b3a1a 50%)"></span>
+        <span class="ed-no">Edition 1</span>
+        <span class="ed-title">Oil, Dollars, and Power<span class="ed-sub">Why the Middle East matters to the world.</span></span>
+        <span class="ed-go">Read &rarr;</span>
+      </a></li>
+    </ul>
+    <!-- ============ END ALL EDITIONS ============ -->
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M26 64 L2 83 L9 88 L34 76 Z" fill="#5DCAA5"/>
+      <ellipse cx="45" cy="58" rx="29" ry="17" fill="#5DCAA5" transform="rotate(-20 45 58)"/>
+      <path d="M52 42 L60 24 L77 43 L66 60 Z" fill="#5DCAA5"/>
+      <ellipse cx="68" cy="33" rx="15" ry="13" fill="#5DCAA5"/>
+      <path d="M24 66 Q42 46 64 54 Q52 72 30 73 Z" fill="#48B48F"/>
+      <path d="M79 27 C87 26 95 30 100 37 C93 38.5 86 40 80 40 Z" fill="#C9A84C"/>
+      <circle cx="71" cy="31" r="3.2" fill="#121212"/>
+      <path d="M41 75 L41 92 M41 92 L36 95 M41 92 L46 95 M56 72 L56 92 M56 92 L51 95 M56 92 L61 95" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <span>Pip is made in Bengaluru and Mumbai by <a href="https://www.linkedin.com/in/nageshk/" target="_blank" rel="noopener">Nagesh</a> and <a href="https://www.linkedin.com/in/kennethserrao/" target="_blank" rel="noopener">Ken</a>. <a href="https://forms.gle/TqKcyzHDoadU2W3h8" target="_blank" rel="noopener">Sign up</a> to get the next edition.</span>
+  </div>
+</footer>
+
+</body>
+</html>
