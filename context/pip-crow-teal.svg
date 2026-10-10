@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="400" height="400" role="img" aria-label="Pip the crow">
+  <title>Pip</title>
+  <!-- Pip, teal with a heavier beak. Teal #5DCAA5, gold #C9A84C. 2 October 2026. -->
+  <path d="M26 64 L2 83 L9 88 L34 76 Z" fill="#5DCAA5"/>
+  <ellipse cx="45" cy="58" rx="29" ry="17" fill="#5DCAA5" transform="rotate(-20 45 58)"/>
+  <path d="M52 42 L60 24 L77 43 L66 60 Z" fill="#5DCAA5"/>
+  <ellipse cx="68" cy="33" rx="15" ry="13" fill="#5DCAA5"/>
+  <path d="M24 66 Q42 46 64 54 Q52 72 30 73 Z" fill="#48B48F"/>
+  <path d="M79 27 C87 26 95 30 100 37 C93 38.5 86 40 80 40 Z" fill="#C9A84C"/>
+  <circle cx="71" cy="31" r="3.2" fill="#121212"/>
+  <path d="M41 75 L41 92 M41 92 L36 95 M41 92 L46 95 M56 72 L56 92 M56 92 L51 95 M56 92 L61 95" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
